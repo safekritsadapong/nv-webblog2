@@ -1,6 +1,6 @@
-const UserContorller = require('./contorller/UserController')
+const UserController = require('./contorller/UserController')
 
-module.exports = (app) => {
+module.exports = (app) =>{
 
     app.get('/users',UserContorller.index),
 
@@ -14,3 +14,4 @@ module.exports = (app) => {
 
     
 }
+
