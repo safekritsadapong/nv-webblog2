@@ -19,7 +19,7 @@ delete(req,res){
 // get user by id
 show(req,res){ 
     res.send(' ดูผู้ใช้งานทั้งหมด ' + req.params.userId + JSON.stringify(req.body))
- }
+}
 
 }
 

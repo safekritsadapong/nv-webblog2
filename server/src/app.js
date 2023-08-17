@@ -20,15 +20,16 @@ app.get('/hello/:person', function(req,res){
     res.send('say hello with ' + req.params.name)
 })
   
-app.post('/hello', function(req,res){
+ app.post('/hello', function(req,res){
     res.send('OK you post - ' + req.body.name)
-    
+    console.log('hello - ' + req.params.name)
+    res.send('say hello with ' + req.params.name)
 })
   
 
 let port =process.env.PORT || config.port
 
-sequelize.sync({force: false}).thet(() =>{
+sequelize.sync({force: false}).then(() =>{
 app.listen(port, function () {
     console.log('server runing on ' + port)
   })
