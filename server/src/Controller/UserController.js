@@ -13,13 +13,13 @@ put(req,res){
     res.send(' แก้ไขข้อมูลผู้ใช้ ' + req.params.userId + JSON.stringify(req.body))
 },
 //delete user
-remove(req,res){ 
+delete(req,res){ 
     res.send(' ลบผู้ใช้งาน ' + req.params.userId + JSON.stringify(req.body))
 },
 // get user by id
 show(req,res){ 
     res.send(' ดูผู้ใช้งานทั้งหมด ' + req.params.userId + JSON.stringify(req.body))
-}
+ }
 
 }
 

@@ -3,8 +3,9 @@ let bodyParser = require('body-parser')
 const {sequelize} = require('./models')
 
 const config = require('./config/config')
-const app = express()
 
+const app =express()
+ 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
@@ -18,8 +19,12 @@ app.get('/hello/:person', function(req,res){
     console.log('hello - ' + req.params.name)
     res.send('say hello with ' + req.params.name)
 })
-    app.post('/hello',function (req,res){
+  
+app.post('/hello', function(req,res){
+    res.send('OK you post - ' + req.body.name)
+    
 })
+  
 
 let port =process.env.PORT || config.port
 
@@ -28,3 +33,7 @@ app.listen(port, function () {
     console.log('server runing on ' + port)
   })
 })
+
+app.listen(port, function () {
+    console.log('server runing on ' + port)
+  })
